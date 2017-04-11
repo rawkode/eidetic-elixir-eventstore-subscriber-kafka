@@ -28,7 +28,7 @@ defmodule Eidetic.EventStore.Subscriber.Kafka.Mixfile do
       {:kafka_ex, "~> 0.6.5"},
       {:poolboy, ">= 1.5.1"},
       {:uuid, "~> 1.1"},
-      {:poison, "~> 3.0"},
+      {:poison, "~> 2.0"},
       {:ex_doc, ">= 0.0.0", only: :dev},
       {:credo, "~> 0.7", only: [:dev, :test]}
     ]
