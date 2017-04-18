@@ -23,7 +23,7 @@ defmodule Eidetic.EventStore.Subscriber.Kafka do
         messages: [%KafkaEx.Protocol.Produce.Message{
           value: Poison.encode!(event)}]}
     ) do
-      [%KafkaEx.Protocol.Produce.Response{partitions: [%{error_code: 0, offset: offset, partition: partition}], topic: topic}] ->
+      {:ok, serial_number} ->
         Logger.debug("Published to Kafka")
         :ok
       error ->
